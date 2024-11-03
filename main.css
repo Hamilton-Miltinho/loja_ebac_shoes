@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto,sans-serif;
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+body{
+    background-color: rgb(238 238 238);
+}
+
+h1, h2{
+    font-style: italic;
+}
+
+h2{
+    padding-bottom: 10px;
+    color: rgb(56 104 214);
+    border-bottom: 2px solid rgb(56 104 214);
+}
+
+p{
+    font-size: 1em;
+}
+
+section{
+    padding: 32px 0;
+}
+
+/* ##################### CABEÇALHO ########################*/
+
+header{
+    background-color: rgb(56 104 214);
+    padding: 16px 0;
+    color: rgb(238 238 238);
+}
+
+header nav li{
+    display: inline;
+    padding-left: 16px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header nav li a{
+    color: rgb(238 238 238);
+    text-decoration: none;
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ##################### SEÇÃO SOBRE ########################*/
+
+#sobre .container div div{
+    padding-top: 16px;
+}
+
+#sobre .container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+#sobre .container img{
+    width: 100%;
+    border-radius: 3px;
+    padding-right: 32px;
+}
+
+/* ##################### SEÇÃO PRODUTOS ########################*/
+
+.lista-produtos{
+    padding-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 24.25%);
+    column-gap: 1%;
+    row-gap: 5%;
+}
+
+
+.lista-produtos li{
+    list-style: none;
+}
+
+.lista-produtos img{
+    mix-blend-mode: multiply;
+    max-width: 100%;
+    padding-bottom: 24px;
+}
+
+.lista-produtos p{
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+button{
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: rgb(56 104 214);
+    color: rgb(238 238 238);
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* ##################### VERSAO PARA TABLETS ########################*/
+
+@media screen and (min-width: 641px) and (max-width: 1023px){
+    .container{
+        max-width: 90%;
+    }
+
+    #sobre .container{
+        display: block;
+    }
+
+    #sobre .container img{
+        padding-bottom: 32px;
+        padding-right: 0;
+    }
+
+    .lista-produtos{
+        padding-top: 16px;
+        display: grid;
+        grid-template-columns: repeat(2, 49.5%);
+        column-gap: 1%;
+        row-gap: 5%;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .container{
+        max-width: 90%;
+    }
+
+    #sobre .container{
+        display: block;
+    }
+
+    #sobre .container img{
+        padding-bottom: 32px;
+        padding-right: 0;
+    }
+
+    .lista-produtos{
+        padding-top: 16px;
+        display: block;
+    }    
+}
